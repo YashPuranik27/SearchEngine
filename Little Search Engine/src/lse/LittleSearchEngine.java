@@ -70,7 +70,6 @@ public class LittleSearchEngine {
 	 * @param kws Keywords hash table for a document
 	 */
 	public void mergeKeywords(HashMap<String,Occurrence> kws) {
-		/** COMPLETE THIS METHOD **/
 		for(String keyword:kws.keySet()){
 			if(keywordsIndex.containsKey(keyword)){
 				keywordsIndex.get(keyword).add(kws.get(keyword));
@@ -96,13 +95,12 @@ public class LittleSearchEngine {
 	 * If a word has multiple trailing punctuation characters, they must all be stripped
 	 * So "word!!" will become "word", and "word?!?!" will also become "word"
 	 * 
-	 * See assignment description for examples
+	 *
 	 * 
 	 * @param word Candidate word
 	 * @return Keyword (word without trailing punctuation, LOWER CASE)
 	 */
 	public String getKeyword(String word) {
-		/** COMPLETE THIS METHOD **/
 		word = word.toLowerCase();
 		for(int i = word.length()-1; i>=0; i--){
 			if((word.charAt(i)=='.')||(word.charAt(i)==',')||(word.charAt(i)=='?')||(word.charAt(i)==':')||(word.charAt(i)==';')||(word.charAt(i)=='!')){
@@ -124,10 +122,9 @@ public class LittleSearchEngine {
 	 * @param occs List of Occurrences
 	 * @return Sequence of mid point indexes in the input list checked by the binary search process,
 	 *         null if the size of the input list is 1. This returned array list is only used to test
-	 *         your code - it is not used elsewhere in the program.
+	 *        
 	 */
 	public ArrayList<Integer> insertLastOccurrence(ArrayList<Occurrence> occs) {
-		/** COMPLETE THIS METHOD **/
 		if(occs.size()==1) {
 			return null;
 		}
@@ -200,7 +197,6 @@ public class LittleSearchEngine {
 	 *         returns null or empty array list.
 	 */
 	public ArrayList<String> top5search(String kw1, String kw2) {
-		/** COMPLETE THIS METHOD **/
 		ArrayList<String>results=new ArrayList<String>();
 		kw1=kw1.toLowerCase();
 		kw2=kw2.toLowerCase();
